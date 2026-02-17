@@ -2,18 +2,18 @@ import { Users, BookOpen, ClipboardCheck, TrendingUp } from "lucide-react";
 import { students, grades, classes, subjects } from "@/lib/mock-data";
 
 const stats = [
-  { label: "Total Students", value: students.length, icon: Users, color: "bg-primary/10 text-primary" },
-  { label: "Subjects", value: subjects.length, icon: BookOpen, color: "bg-accent/20 text-accent-foreground" },
-  { label: "Grades Entered", value: grades.filter((g) => g.teacherName === "Mr. Adebayo").length, icon: ClipboardCheck, color: "bg-success/10 text-success" },
-  { label: "Avg Score", value: Math.round(grades.filter((g) => g.teacherName === "Mr. Adebayo" && g.status === "approved").reduce((s, g) => s + g.marks, 0) / (grades.filter((g) => g.teacherName === "Mr. Adebayo" && g.status === "approved").length || 1)), icon: TrendingUp, color: "bg-info/10 text-info" },
+  { label: "Nombre d'élèves", value: students.length, icon: Users, color: "bg-primary/10 text-primary" },
+  { label: "matières", value: subjects.length, icon: BookOpen, color: "bg-accent/20 text-accent-foreground" },
+  { label: "Cotes enregistrées", value: grades.filter((g) => g.teacherName === "Mr. Adebayo").length, icon: ClipboardCheck, color: "bg-success/10 text-success" },
+  { label: "La cote moyenne", value: Math.round(grades.filter((g) => g.teacherName === "Mr. Adebayo" && g.status === "approved").reduce((s, g) => s + g.marks, 0) / (grades.filter((g) => g.teacherName === "Mr. Adebayo" && g.status === "approved").length || 1)), icon: TrendingUp, color: "bg-info/10 text-info" },
 ];
 
 export default function TeacherDashboard() {
   return (
     <div className="space-y-6">
       <div>
-        <h2 className="text-xl font-heading font-bold">Welcome back, Mr. Adebayo</h2>
-        <p className="text-sm text-muted-foreground">Here's your teaching overview</p>
+        <h2 className="text-xl font-heading font-bold">Bon retour, Mr. Adebayo</h2>
+        <p className="text-sm text-muted-foreground">Voici votre aprerçu pédagogique</p>
       </div>
 
       <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
@@ -29,7 +29,7 @@ export default function TeacherDashboard() {
       </div>
 
       <div className="bg-card rounded-xl border border-border p-5">
-        <h3 className="font-heading font-semibold mb-3">Recent Activity</h3>
+        <h3 className="font-heading font-semibold mb-3">Recents enregistrements</h3>
         <div className="space-y-3">
           {grades.filter((g) => g.teacherName === "Mr. Adebayo").slice(0, 5).map((g) => (
             <div key={g.id} className="flex items-center justify-between py-2 border-b border-border/50 last:border-0">

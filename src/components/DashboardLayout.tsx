@@ -17,7 +17,7 @@ interface NavItem {
 const navByRole: Record<Role, NavItem[]> = {
   teacher: [
     { label: "Dashboard", path: "/teacher", icon: LayoutDashboard },
-    { label: "Gestion de Cotes", path: "/teacher/grades", icon: BookOpen },
+    { label: "Gestion des Cotes", path: "/teacher/grades", icon: BookOpen },
     { label: "Gestion des élèves", path: "/teacher/students", icon: Users },
     { label: "Gestion des Cours", path: "/teacher/courses", icon: Book },
   ],
@@ -33,7 +33,7 @@ const navByRole: Record<Role, NavItem[]> = {
   ],
 };
 
-const roleLabels: Record<Role, string> = { teacher: "Teacher", director: "Director", parent: "Parent" };
+const roleLabels: Record<Role, string> = { teacher: "Enseigant", director: "Directeur", parent: "Parent" };
 
 export default function DashboardLayout() {
   const { role, userName, logout } = useAuth();
@@ -98,7 +98,7 @@ export default function DashboardLayout() {
           className="flex items-center gap-2 px-3 py-2 rounded-lg text-sm text-sidebar-muted hover:text-sidebar-foreground hover:bg-sidebar-accent transition-colors w-full"
         >
           <LogOut className="w-4 h-4" />
-          <span>Sign out</span>
+          <span>Deconnexion</span>
         </button>
       </div>
     </>
@@ -128,7 +128,7 @@ export default function DashboardLayout() {
           <button onClick={() => setMobileOpen(true)} className="md:hidden p-1.5 rounded-lg hover:bg-muted">
             <Menu className="w-5 h-5" />
           </button>
-          <h1 className="text-base font-heading font-semibold text-foreground">{roleLabels[role]} Portal</h1>
+          <h1 className="text-base font-heading font-semibold text-foreground">Portail {roleLabels[role]}</h1>
         </header>
 
         <main className="flex-1 p-4 md:p-6 animate-fade-in">

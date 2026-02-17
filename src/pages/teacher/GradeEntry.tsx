@@ -39,15 +39,15 @@ export default function GradeEntry() {
     <div className="space-y-5">
       <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3">
         <div>
-          <h2 className="text-xl font-heading font-bold">Grade Entry</h2>
-          <p className="text-sm text-muted-foreground">Enter and manage student marks</p>
+          <h2 className="text-xl font-heading font-bold">Saisie des Cotes</h2>
+          <p className="text-sm text-muted-foreground">Entrer et gérer les notes des élèves</p>
         </div>
         <div className="flex gap-2">
           <button onClick={() => handleAction("draft")} className="flex items-center gap-1.5 px-3 py-2 text-sm rounded-lg border border-border hover:bg-muted transition-colors">
-            <Save className="w-4 h-4" /> Save Draft
+            <Save className="w-4 h-4" /> Enregistrer Brouillon
           </button>
           <button onClick={() => handleAction("submit")} className="flex items-center gap-1.5 px-3 py-2 text-sm rounded-lg bg-primary text-primary-foreground hover:bg-primary/90 transition-colors">
-            <Send className="w-4 h-4" /> Submit
+            <Send className="w-4 h-4" /> Sauvegarder
           </button>
         </div>
       </div>
@@ -83,10 +83,11 @@ export default function GradeEntry() {
           <table className="w-full text-sm">
             <thead>
               <tr className="border-b border-border bg-muted/50">
-                <th className="text-left px-4 py-3 font-medium text-muted-foreground">Roll</th>
-                <th className="text-left px-4 py-3 font-medium text-muted-foreground">Student Name</th>
-                <th className="text-center px-4 py-3 font-medium text-muted-foreground">Marks / 100</th>
-                <th className="text-center px-4 py-3 font-medium text-muted-foreground">Grade</th>
+                <th className="text-left px-4 py-3 font-medium text-muted-foreground">N°</th>
+                <th className="text-left px-4 py-3 font-medium text-muted-foreground">Nom de l'élève</th>
+                <th className="text-center px-4 py-3 font-medium text-muted-foreground">Points / 100</th>
+                <th className="text-center px-4 py-3 font-medium text-muted-foreground">Note</th>
+                <th className="text-center px-4 py-3 font-medium text-muted-foreground">Type d'évaluation</th>
                 <th className="text-center px-4 py-3 font-medium text-muted-foreground">Status</th>
               </tr>
             </thead>
@@ -113,6 +114,14 @@ export default function GradeEntry() {
                       <span className={`inline-block w-8 text-center font-bold text-xs ${
                         marks >= 80 ? "text-success" : marks >= 60 ? "text-primary" : "text-destructive"
                       }`}>{grade}</span>
+                    </td>
+                    <td className="px-4 py-3 text-center">
+                      <select className="text-xs bg-muted/50 border border-border rounded-md px-2 py-1 focus:ring-2 focus:ring-primary/20 focus:border-primary outline-none">
+                        <option>Devoir</option>
+                        <option>Interrogation</option>
+                        <option>Examen de contrôle</option>
+                        <option>Examen trimestriel</option>
+                      </select>
                     </td>
                     <td className="px-4 py-3 text-center">
                       <span className={`text-[10px] px-2 py-0.5 rounded-full font-medium ${

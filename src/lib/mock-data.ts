@@ -28,9 +28,9 @@ export interface TermResult {
   rank: number;
 }
 
-export const classes = ["Grade 1", "Grade 2", "Grade 3", "Grade 4", "Grade 5", "Grade 6"];
+export const classes = ["Classe de 1érè", "Classe de 2émè", "Classe de 3émè", "Classe de 4émè", "Classe de 5émè", "Classe de 6émè"];
 export const subjects = ["Mathematics", "English", "Science", "History", "Geography", "French", "Art"];
-export const terms = ["Term 1", "Term 2", "Term 3"];
+export const terms = ["1er Trimestre", "2e Trimestre", "3e Trimestre"];
 
 const firstNames = ["Amara", "Kwame", "Fatima", "Emeka", "Zainab", "David", "Grace", "Samuel", "Adaeze", "Tunde", "Blessing", "Kofi", "Ngozi", "Yusuf", "Chioma", "Ibrahim", "Esther", "Oumar", "Ruth", "Jean"];
 const lastNames = ["Okafor", "Mensah", "Diallo", "Adeyemi", "Hassan", "Kimani", "Njoku", "Asante", "Bello", "Kamara", "Osei", "Traore", "Nwosu", "Mugisha", "Abdi", "Ndlovu", "Sow", "Okonkwo", "Mwangi", "Dlamini"];
