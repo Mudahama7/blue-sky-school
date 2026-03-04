@@ -3,7 +3,8 @@ import { useAuth } from "@/hooks/use-auth";
 import { Role } from "@/lib/mock-data";
 import {
   LayoutDashboard, BookOpen, ClipboardCheck, Search, BarChart3,
-  FileText, TrendingUp, Download, LogOut, Menu, X, Users, Book
+  FileText, TrendingUp, Download, LogOut, Menu, X, Users, Book,
+  Award
 } from "lucide-react";
 import logo from "@/assets/logo.jpeg";
 import { useState } from "react";
@@ -17,7 +18,8 @@ interface NavItem {
 const navByRole: Record<Role, NavItem[]> = {
   teacher: [
     { label: "Dashboard", path: "/teacher", icon: LayoutDashboard },
-    { label: "Gestion des Cotes", path: "/teacher/grades", icon: BookOpen },
+    { label: "Fiches des Cotes", path: "/teacher/grades", icon: BookOpen },
+    { label: "Bulletins", path: "/teacher/bulletins", icon: Award },
     { label: "Gestion des élèves", path: "/teacher/students", icon: Users },
     { label: "Gestion des Cours", path: "/teacher/courses", icon: Book },
   ],

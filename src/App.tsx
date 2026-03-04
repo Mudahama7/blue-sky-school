@@ -17,6 +17,9 @@ import ReportCardPage from "./pages/parent/ReportCardPage";
 import NotFound from "./pages/NotFound";
 import LoginPage from "./pages/LoginPage";
 import ParentLoginPage from "./pages/ParentLoginPage";
+import BulletinsView from "./pages/teacher/TeacherBulletinsViewer";
+import StudentManagement from "./pages/teacher/StudentMgt";
+import CourseManagement from "./pages/teacher/CoursesMgt";
 
 const queryClient = new QueryClient();
 
@@ -34,7 +37,10 @@ const App = () => (
             <Route element={<DashboardLayout />}>
               <Route path="/teacher" element={<TeacherDashboard />} />
               <Route path="/teacher/grades" element={<GradeEntry />} />
-              
+              <Route path="/teacher/bulletins" element={<BulletinsView />} />
+              <Route path="/teacher/students" element={<StudentManagement />} />
+              <Route path="/teacher/courses" element={<CourseManagement />} />
+
               <Route path="/director" element={<DirectorOverview />} />
               <Route path="/director/validation" element={<ValidationPage />} />
               <Route path="/director/students" element={<StudentDirectory />} />

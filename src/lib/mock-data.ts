@@ -29,7 +29,7 @@ export interface TermResult {
 }
 
 export const classes = ["Classe de 1érè", "Classe de 2émè", "Classe de 3émè", "Classe de 4émè", "Classe de 5émè", "Classe de 6émè"];
-export const subjects = ["Mathematics", "English", "Science", "History", "Geography", "French", "Art"];
+export const subjects = ["Mathematiques", "Anglais", "Science", "Histoire", "Géographie", "Français", "Art"];
 export const terms = ["1er Trimestre", "2e Trimestre", "3e Trimestre"];
 
 const firstNames = ["Amara", "Kwame", "Fatima", "Emeka", "Zainab", "David", "Grace", "Samuel", "Adaeze", "Tunde", "Blessing", "Kofi", "Ngozi", "Yusuf", "Chioma", "Ibrahim", "Esther", "Oumar", "Ruth", "Jean"];
